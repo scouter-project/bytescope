@@ -1,0 +1,153 @@
+[INFO][2016-09-11 16:29:21][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:30:54][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:31:01][RunnerMain] bootscope runner started.
+[ERROR][2016-09-11 16:31:50][JmxProxy] javax.management.AttributeNotFoundException: No such attribute: LogFilePath
+	at com.sun.jmx.mbeanserver.PerInterface.setAttribute(PerInterface.java:100)
+	at com.sun.jmx.mbeanserver.MBeanSupport.setAttribute(MBeanSupport.java:230)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.setAttribute(DefaultMBeanServerInterceptor.java:746)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.setAttribute(JmxMBeanServer.java:739)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1489)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1307)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1399)
+	at javax.management.remote.rmi.RMIConnectionImpl.setAttribute(RMIConnectionImpl.java:720)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:323)
+	at sun.rmi.transport.Transport$1.run(Transport.java:178)
+	at sun.rmi.transport.Transport$1.run(Transport.java:175)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:174)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:557)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:812)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:671)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at com.sun.jmx.remote.internal.PRef.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl_Stub.setAttribute(Unknown Source)
+	at javax.management.remote.rmi.RMIConnector$RemoteMBeanServerConnection.setAttribute(RMIConnector.java:964)
+	at scouterx.toys.bytescope.util.JmxProxy.sendLogDir(JmxProxy.java:36)
+	at scouterx.toys.bytescope.command.Use.use(Use.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:60)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:22)
+	at scouterx.toys.bytescope.runner.RunnerMain.main(RunnerMain.java:64)
+[INFO][2016-09-11 16:35:34][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:35:34][RunnerMain] bootscope runner started.
+[ERROR][2016-09-11 16:37:13][JmxProxy] javax.management.InstanceNotFoundException: scouter.toys.bytescope:name=BytescopeContext
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1095)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getClassLoaderFor(DefaultMBeanServerInterceptor.java:1444)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.getClassLoaderFor(JmxMBeanServer.java:1324)
+	at javax.management.remote.rmi.RMIConnectionImpl$5.run(RMIConnectionImpl.java:1384)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.management.remote.rmi.RMIConnectionImpl.getClassLoaderFor(RMIConnectionImpl.java:1380)
+	at javax.management.remote.rmi.RMIConnectionImpl.setAttribute(RMIConnectionImpl.java:728)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$2.run(Transport.java:202)
+	at sun.rmi.transport.Transport$2.run(Transport.java:199)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:198)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:567)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.access$400(TCPTransport.java:619)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$1.run(TCPTransport.java:684)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler$1.run(TCPTransport.java:681)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:681)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at com.sun.jmx.remote.internal.PRef.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl_Stub.setAttribute(Unknown Source)
+	at javax.management.remote.rmi.RMIConnector$RemoteMBeanServerConnection.setAttribute(RMIConnector.java:964)
+	at scouterx.toys.bytescope.util.JmxProxy.sendLogDir(JmxProxy.java:36)
+	at scouterx.toys.bytescope.command.Use.use(Use.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:60)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:22)
+	...
+[INFO][2016-09-11 16:37:47][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:38:24][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:38:28][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:38:28][RunnerMain] bootscope runner started.
+[ERROR][2016-09-11 16:40:58][JmxProxy] javax.management.InstanceNotFoundException: scouter.toys.bytescope:name=BytescopeContext
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getMBean(DefaultMBeanServerInterceptor.java:1095)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.getClassLoaderFor(DefaultMBeanServerInterceptor.java:1444)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.getClassLoaderFor(JmxMBeanServer.java:1324)
+	at javax.management.remote.rmi.RMIConnectionImpl$5.run(RMIConnectionImpl.java:1363)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.management.remote.rmi.RMIConnectionImpl.getClassLoaderFor(RMIConnectionImpl.java:1360)
+	at javax.management.remote.rmi.RMIConnectionImpl.setAttribute(RMIConnectionImpl.java:708)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:323)
+	at sun.rmi.transport.Transport$1.run(Transport.java:178)
+	at sun.rmi.transport.Transport$1.run(Transport.java:175)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:174)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:557)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:812)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:671)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+	at sun.rmi.transport.StreamRemoteCall.exceptionReceivedFromServer(StreamRemoteCall.java:275)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:252)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:161)
+	at com.sun.jmx.remote.internal.PRef.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl_Stub.setAttribute(Unknown Source)
+	at javax.management.remote.rmi.RMIConnector$RemoteMBeanServerConnection.setAttribute(RMIConnector.java:964)
+	at scouterx.toys.bytescope.util.JmxProxy.sendLogDir(JmxProxy.java:36)
+	at scouterx.toys.bytescope.command.Use.use(Use.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:60)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:22)
+	at scouterx.toys.bytescope.runner.RunnerMain.main(RunnerMain.java:64)
+[INFO][2016-09-11 16:41:34][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:41:34][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 16:42:28][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:42:28][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 16:46:15][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:46:15][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 16:48:26][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:48:26][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 16:49:01][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:49:01][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 16:53:58][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:53:58][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 16:54:24][JmxProxy] send agent log dir : /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.runner/logs to DefaultDomain
+[INFO][2016-09-11 16:54:40][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 16:54:40][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 16:56:48][JmxProxy] send agent log dir : /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.runner/logs to DefaultDomain
+[INFO][2016-09-11 17:00:30][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 17:00:30][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 17:09:19][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 17:09:19][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 17:09:39][JmxProxy] send agent log dir : /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.runner/logs to 87299@GunMac.local
+[INFO][2016-09-11 17:11:40][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 17:11:40][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 17:12:02][JmxProxy] send agent log dir : /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.runner/logs to 87618@GunMac.local

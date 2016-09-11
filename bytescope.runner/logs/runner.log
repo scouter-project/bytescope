@@ -1,0 +1,100 @@
+[INFO][2016-09-11 17:16:07][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 17:16:38][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 17:16:38][RunnerMain] bootscope runner started.
+[ERROR][2016-09-11 17:17:54][JmxProxy] java.rmi.ConnectException: Connection refused to host: 192.168.0.111; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:129)
+	at com.sun.jmx.remote.internal.PRef.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl_Stub.getAttribute(Unknown Source)
+	at javax.management.remote.rmi.RMIConnector$RemoteMBeanServerConnection.getAttribute(RMIConnector.java:906)
+	at scouterx.toys.bytescope.util.JmxProxy.sendAgentLogFileLocation(JmxProxy.java:44)
+	at scouterx.toys.bytescope.command.Use.use(Use.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:60)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:22)
+	at scouterx.toys.bytescope.runner.RunnerMain.main(RunnerMain.java:64)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:147)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:129)
+	at com.sun.jmx.remote.internal.PRef.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl_Stub.getAttribute(Unknown Source)
+	at javax.management.remote.rmi.RMIConnector$RemoteMBeanServerConnection.getAttribute(RMIConnector.java:906)
+	at scouterx.toys.bytescope.util.JmxProxy.sendAgentLogFileLocation(JmxProxy.java:44)
+	at scouterx.toys.bytescope.command.Use.use(Use.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	...
+[INFO][2016-09-11 17:17:55][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 17:17:55][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 17:27:02][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 17:27:02][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 17:28:01][JmxProxy] send agent log dir : /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.runner/logs to 89636@GunMac.local
+[INFO][2016-09-11 17:39:08][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 17:39:08][RunnerMain] bootscope runner started.
+[INFO][2016-09-11 17:40:15][RunnerMain] starting bootscope runner...
+[INFO][2016-09-11 17:40:15][RunnerMain] bootscope runner started.
+[ERROR][2016-09-11 20:54:36][JmxProxy] java.rmi.ConnectException: Connection refused to host: 192.168.0.111; nested exception is: 
+	java.net.ConnectException: Connection refused
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:129)
+	at com.sun.jmx.remote.internal.PRef.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl_Stub.setAttribute(Unknown Source)
+	at javax.management.remote.rmi.RMIConnector$RemoteMBeanServerConnection.setAttribute(RMIConnector.java:964)
+	at scouterx.toys.bytescope.util.JmxProxy.sendAgentLogFileDef(JmxProxy.java:43)
+	at scouterx.toys.bytescope.command.Use.use(Use.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:60)
+	at scouterx.toys.bytescope.command.support.CommandChainExecutor.execute(CommandChainExecutor.java:22)
+	at scouterx.toys.bytescope.runner.RunnerMain.main(RunnerMain.java:64)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:147)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:129)
+	at com.sun.jmx.remote.internal.PRef.invoke(Unknown Source)
+	at javax.management.remote.rmi.RMIConnectionImpl_Stub.setAttribute(Unknown Source)
+	at javax.management.remote.rmi.RMIConnector$RemoteMBeanServerConnection.setAttribute(RMIConnector.java:964)
+	at scouterx.toys.bytescope.util.JmxProxy.sendAgentLogFileDef(JmxProxy.java:43)
+	at scouterx.toys.bytescope.command.Use.use(Use.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	...
