@@ -11,6 +11,20 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="bytescope-runner" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.sun:tools:1.6.0">
+        <CLASSES>
+          <root url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/lib/tools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Maven: jline:jline:2.12" level="project" />
+    <orderEntry type="module" module-name="bytescope.common" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />
+    <orderEntry type="module" module-name="bytescope.agent" scope="RUNTIME" />
+    <orderEntry type="module" module-name="scouter.common" scope="RUNTIME" />
   </component>
 </module>
