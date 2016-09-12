@@ -1,6 +1,6 @@
 package scouterx.toys.bytescope.command.support;
 
-import org.apache.commons.lang3.StringUtils;
+import scouterx.toys.util.$;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -19,14 +19,14 @@ public class CommandChainExecutor {
     }
 
     public CommandResult execute(String line) {
-        return execute(StringUtils.split(line));
+        return execute($.split(line));
     }
 
     public CommandResult execute(String[] args) {
         try {
             String className = this.getClass().getName();
-            String commandClassName = StringUtils.substring(className, 0, StringUtils.lastOrdinalIndexOf(className, ".", 2) + 1)
-                    + StringUtils.capitalize(args[0]);
+            String commandClassName = $.substring(className, 0, $.lastOrdinalIndexOf(className, ".", 2) + 1)
+                    + $.capitalize(args[0]);
             Class clazz = Class.forName(commandClassName);
             Object o = clazz.newInstance();
 
@@ -35,7 +35,7 @@ public class CommandChainExecutor {
                 if (i == 0) {
                     commands[i] = args[i];
                 } else {
-                    commands[i] = commands[i-1] + StringUtils.capitalize(args[i]);
+                    commands[i] = commands[i-1] + $.capitalize(args[i]);
                 }
             }
 

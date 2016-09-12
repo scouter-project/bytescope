@@ -10,7 +10,7 @@ import scouterx.toys.bytescope.common.JmxConstant;
 import scouterx.toys.bytescope.runner.BytescopeConsole;
 import scouterx.toys.bytescope.util.BytescopeContext;
 import scouterx.toys.bytescope.util.JmxProxy;
-import scouterx.toys.bytescope.util._;
+import scouterx.toys.bytescope.util.__;
 
 import javax.management.*;
 import javax.management.remote.JMXConnectorFactory;
@@ -36,7 +36,7 @@ public class Use {
             javaAgentLoaded = isLoadedJavaAgent(pid);
         } else {
             try {
-                String address = _.attachJmx(pid);
+                String address = __.attachJmx(pid);
                 JMXServiceURL jmxUrl = new JMXServiceURL(address);
                 mbeanConnection = JMXConnectorFactory.connect(jmxUrl).getMBeanServerConnection();
                 BytescopeContext.putMBeanConnection(pid, mbeanConnection);
@@ -56,7 +56,7 @@ public class Use {
 
         //load java agent
         if(!javaAgentLoaded) {
-            _.loadJavaAgent(pid);
+            __.loadJavaAgent(pid);
             JmxProxy.sendAgentLogFileDef(mbeanConnection);
         }
 

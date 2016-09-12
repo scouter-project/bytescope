@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * @author Gun Lee (gunlee01@gmail.com) on 2016. 9. 11.
  */
-public class _ {
+public class __ {
     private static RunnerConfigure conf = RunnerConfigure.getInstance();
 
     public static final String lineSeparator = System.getProperty("line.separator");
@@ -24,7 +24,7 @@ public class _ {
             "scouter.bytescope-0.1-SNAPSHOT.jar";
 
     public static void loadJavaAgent(String pid) {
-        _.println("dynamically loading javaagent");
+        __.println("dynamically loading javaagent");
 
         try {
             VirtualMachine vm = VirtualMachine.attach(pid);
@@ -58,7 +58,7 @@ public class _ {
                     }
                 }
                 agent = f.getCanonicalPath();
-                _.println("Loading " + agent + " into target VM ...");
+                __.println("Loading " + agent + " into target VM ...");
 
                 vm.loadAgent(agent);
                 serviceUrl = ConnectorAddressLink.importFrom(Integer.parseInt(vm.id().trim()));

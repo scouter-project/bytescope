@@ -28,6 +28,7 @@ scouter/javassist/bytecode/CodeIterator$LdcW.class
 scouter/org/objectweb/asm/ClassReader.class
 scouter/javassist/compiler/Javac$1.class
 scouter/javassist/CtField$IntInitializer.class
+scouter/toys/bytescope/util/AgentLogger.class
 scouter/javassist/bytecode/stackmap/TypeData$NullType.class
 scouter/javassist/bytecode/TypeAnnotationsAttribute$SubCopier.class
 scouter/javassist/bytecode/BootstrapMethodsAttribute.class
@@ -278,6 +279,7 @@ scouter/javassist/bytecode/CodeIterator$Pointers.class
 scouter/org/objectweb/asm/tree/LocalVariableAnnotationNode.class
 scouter/javassist/tools/reflect/Loader.class
 scouter/javassist/tools/rmi/Proxy.class
+scouter/toys/bytescope/util/AgentLogger$1.class
 scouter/javassist/expr/MethodCall.class
 scouter/javassist/expr/Expr.class
 scouter/javassist/bytecode/ClassInfo.class
@@ -323,6 +325,7 @@ scouter/toys/bytescope/asm/IASM.class
 scouter/javassist/compiler/CodeGen$ReturnHook.class
 scouter/org/objectweb/asm/xml/ASMContentHandler$InvokeDynamicBsmArgumentsRule.class
 scouter/javassist/CtField$MultiArrayInitializer.class
+scouter/toys/bytescope/util/AgentLogger$FileLog.class
 scouter/javassist/bytecode/ParameterAnnotationsAttribute.class
 scouter/javassist/compiler/TypeChecker.class
 scouter/javassist/runtime/Cflow.class

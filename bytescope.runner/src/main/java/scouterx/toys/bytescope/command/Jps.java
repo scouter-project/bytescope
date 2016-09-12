@@ -4,7 +4,7 @@ import com.sun.tools.attach.AttachNotSupportedException;
 import com.sun.tools.attach.VirtualMachine;
 import com.sun.tools.attach.VirtualMachineDescriptor;
 import scouterx.toys.bytescope.command.support.CommandResult;
-import scouterx.toys.bytescope.util._;
+import scouterx.toys.bytescope.util.__;
 
 import java.io.IOException;
 import java.util.List;
@@ -32,7 +32,7 @@ public class Jps {
                         .setMessage("[IO Exception]" + e.getMessage())
                         .build();
             }
-            builder.append(vmd.id()).append(" ").append(vmd.displayName()).append(_.lineSeparator);
+            builder.append(vmd.id()).append(" ").append(vmd.displayName()).append(__.lineSeparator);
         }
 
         return CommandResult.getBuilder()

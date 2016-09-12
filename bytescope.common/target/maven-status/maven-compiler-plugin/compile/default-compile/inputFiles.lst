@@ -32,6 +32,7 @@
 /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.common/src/main/java/scouterx/org/pmw/tinylog/LogEntryForwarder.java
 /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.common/src/main/java/scouterx/org/pmw/tinylog/policies/HourlyPolicy.java
 /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.common/src/main/java/scouterx/org/pmw/tinylog/labelers/ProcessIdLabeler.java
+/Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.common/src/main/java/scouterx/toys/util/$.java
 /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.common/src/main/java/scouterx/org/pmw/tinylog/labelers/Labeler.java
 /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.common/src/main/java/scouterx/org/pmw/tinylog/writers/FileWriter.java
 /Users/gunlee/Documents/workspace/scouter/scouter.toys/bytescope/bytescope.common/src/main/java/scouterx/org/pmw/tinylog/labelers/CountLabeler.java

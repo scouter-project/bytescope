@@ -1,7 +1,7 @@
 package scouterx.toys.bytescope.runner;
 
 import jline.console.ConsoleReader;
-import scouterx.toys.bytescope.util._;
+import scouterx.toys.bytescope.util.__;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -33,6 +33,6 @@ public class BytescopeConsole {
     }
 
     public static void println(String str) {
-        instance.writer.write(str + _.lineSeparator);
+        instance.writer.write(str + __.lineSeparator);
     }
 }

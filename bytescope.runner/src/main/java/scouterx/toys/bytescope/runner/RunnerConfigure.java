@@ -16,12 +16,12 @@
  */
 package scouterx.toys.bytescope.runner;
 
-import org.apache.commons.lang3.StringUtils;
 import scouterx.org.pmw.tinylog.Configurator;
 import scouterx.org.pmw.tinylog.labelers.CountLabeler;
 import scouterx.org.pmw.tinylog.policies.SizePolicy;
 import scouterx.org.pmw.tinylog.writers.RollingFileWriter;
 import scouterx.toys.bytescope.util.JmxProxy;
+import scouterx.toys.util.$;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -49,7 +49,7 @@ public class RunnerConfigure {
 
     static {
         bytescopeHome = System.getProperty("bytescope.home");
-        if(StringUtils.isBlank(bytescopeHome)) {
+        if($.isBlank(bytescopeHome)) {
             bytescopeHome = new File("./").getAbsolutePath();
         }
     }
@@ -117,7 +117,7 @@ public class RunnerConfigure {
         this.logAgentLevel = getValue("log_agent_level", "INFO");
 
         String _logDir = getValue("log_dir");
-        if(StringUtils.isBlank(_logDir)) {
+        if($.isBlank(_logDir)) {
             _logDir = bytescopeHome + "/logs";
         }
         this.setLogDir(_logDir);
@@ -160,11 +160,11 @@ public class RunnerConfigure {
     }
 
     public String getValue(String key) {
-        return StringUtils.trim(property.getProperty(key));
+        return $.trim(property.getProperty(key));
     }
 
     public String getValue(String key, String def) {
-        return StringUtils.trim(property.getProperty(key, def));
+        return $.trim(property.getProperty(key, def));
     }
 
     public int getInt(String key, int def) {
