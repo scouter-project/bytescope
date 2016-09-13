@@ -12,4 +12,8 @@
 hs_err_pid*
 
 bytescope.boot/target/
+bytescope.common/target/
+bytescope.runner/target/
+bytescope.agent/target/
 *.iml
+
