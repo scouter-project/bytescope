@@ -28,7 +28,6 @@ scouter/javassist/bytecode/CodeIterator$LdcW.class
 scouter/org/objectweb/asm/ClassReader.class
 scouter/javassist/compiler/Javac$1.class
 scouter/javassist/CtField$IntInitializer.class
-scouter/toys/bytescope/util/AgentLogger.class
 scouter/javassist/bytecode/stackmap/TypeData$NullType.class
 scouter/javassist/bytecode/TypeAnnotationsAttribute$SubCopier.class
 scouter/javassist/bytecode/BootstrapMethodsAttribute.class
@@ -108,7 +107,6 @@ scouter/javassist/expr/FieldAccess.class
 scouter/javassist/util/proxy/SecurityActions$2.class
 scouter/org/objectweb/asm/commons/InstructionAdapter.class
 scouter/org/objectweb/asm/tree/MethodNode.class
-scouter/toys/bytescope/util/AsyncRunner$Hook.class
 scouter/org/objectweb/asm/xml/SAXAnnotationAdapter.class
 scouter/javassist/CtNewMethod.class
 scouter/javassist/expr/Instanceof$ProceedForInstanceof.class
@@ -201,7 +199,6 @@ scouter/javassist/bytecode/annotation/MemberValue.class
 scouter/javassist/CtNewConstructor.class
 scouter/javassist/bytecode/SignatureAttribute$BaseType.class
 scouter/org/objectweb/asm/commons/AdviceAdapter.class
-scouter/toys/bytescope/asm/probe/FooBarProbe.class
 scouter/org/objectweb/asm/optimizer/AnnotationConstantsCollector.class
 scouter/javassist/tools/reflect/CannotCreateException.class
 scouter/javassist/bytecode/ConstInfo.class
@@ -247,9 +244,7 @@ scouter/toys/bytescope/asm/HookingSet.class
 scouter/javassist/bytecode/SignatureAttribute$1.class
 scouter/org/objectweb/asm/ClassVisitor.class
 scouter/org/objectweb/asm/Frame.class
-scouter/toys/bytescope/AgentTransformer$2.class
 scouter/javassist/tools/Dump.class
-scouter/toys/bytescope/asm/probe/FooBarProbe$MethodInjectMV.class
 scouter/javassist/JarDirClassPath$1.class
 scouter/org/objectweb/asm/xml/ASMContentHandler$LookupSwitchLabelRule.class
 scouter/javassist/compiler/Javac$3.class
@@ -279,7 +274,6 @@ scouter/javassist/bytecode/CodeIterator$Pointers.class
 scouter/org/objectweb/asm/tree/LocalVariableAnnotationNode.class
 scouter/javassist/tools/reflect/Loader.class
 scouter/javassist/tools/rmi/Proxy.class
-scouter/toys/bytescope/util/AgentLogger$1.class
 scouter/javassist/expr/MethodCall.class
 scouter/javassist/expr/Expr.class
 scouter/javassist/bytecode/ClassInfo.class
@@ -292,7 +286,6 @@ scouter/javassist/bytecode/ClassFileWriter$AttributeWriter.class
 scouter/javassist/bytecode/ByteArray.class
 scouter/javassist/expr/FieldAccess$ProceedForRead.class
 scouter/javassist/scopedpool/ScopedClassPool.class
-scouter/toys/bytescope/asm/probe/FooBarProbe$MethodInjectCV.class
 scouter/javassist/bytecode/ExceptionTable.class
 scouter/javassist/bytecode/annotation/ArrayMemberValue.class
 scouter/javassist/LoaderClassPath.class
@@ -325,7 +318,6 @@ scouter/toys/bytescope/asm/IASM.class
 scouter/javassist/compiler/CodeGen$ReturnHook.class
 scouter/org/objectweb/asm/xml/ASMContentHandler$InvokeDynamicBsmArgumentsRule.class
 scouter/javassist/CtField$MultiArrayInitializer.class
-scouter/toys/bytescope/util/AgentLogger$FileLog.class
 scouter/javassist/bytecode/ParameterAnnotationsAttribute.class
 scouter/javassist/compiler/TypeChecker.class
 scouter/javassist/runtime/Cflow.class
@@ -361,7 +353,6 @@ scouter/org/objectweb/asm/commons/RemappingSignatureAdapter.class
 scouter/org/objectweb/asm/tree/FrameNode.class
 scouter/javassist/bytecode/SyntheticAttribute.class
 scouter/javassist/bytecode/TypeAnnotationsAttribute$SubWalker.class
-scouter/toys/bytescope/mbean/BytescopeContextManager.class
 scouter/org/objectweb/asm/commons/AnalyzerAdapter.class
 scouter/javassist/bytecode/analysis/Analyzer.class
 scouter/javassist/expr/NewExpr.class
@@ -373,7 +364,6 @@ scouter/javassist/CtArray.class
 scouter/javassist/bytecode/ByteVector.class
 scouter/org/objectweb/asm/util/TraceClassVisitor.class
 scouter/toys/bytescope/AgentTransformer$1.class
-scouter/toys/bytescope/util/AsyncRunner.class
 scouter/javassist/bytecode/MethodParametersAttribute.class
 scouter/javassist/CtMethod.class
 scouter/org/objectweb/asm/tree/IincInsnNode.class

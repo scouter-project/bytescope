@@ -17,8 +17,8 @@
 
 package scouter.toys.bytescope.asm;
 
-import scouter.util.StrMatch;
-import scouter.util.StringUtil;
+import scouter.toys.bytescope.util.StrMatch;
+import scouter.toys.bytescope.util.StringUtil;
 
 import java.util.*;
 import java.util.Map.Entry;

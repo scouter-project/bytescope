@@ -19,9 +19,7 @@ public class __ {
 
     public static final String lineSeparator = System.getProperty("line.separator");
 
-    private static final String jarFilePath = "/Users/gunlee/Documents/workspace/scouter/" +
-            "scouter.toys/bytescope/bytescope.agent/target/" +
-            "scouter.bytescope-0.1-SNAPSHOT.jar";
+    private static final String jarFilePath = conf.getBytescopeHome() + File.separator + "agent" + File.separator + "bytescope-agent-0.1-SNAPSHOT.jar";
 
     public static void loadJavaAgent(String pid) {
         __.println("dynamically loading javaagent");

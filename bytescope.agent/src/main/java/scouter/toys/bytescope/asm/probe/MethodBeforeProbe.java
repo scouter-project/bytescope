@@ -29,6 +29,7 @@ import scouter.toys.bytescope.asm.HookingSet;
 import scouter.toys.bytescope.asm.IASM;
 import scouter.toys.bytescope.deco.CommonDeco;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,7 +37,7 @@ import java.util.List;
  */
 public class MethodBeforeProbe implements IASM, Opcodes {
 	private AgentConfigure conf = AgentConfigure.getInstance();
-	private List<HookingSet> target = HookingSet.getHookingMethodSet(conf.hook_injection_method_patterns);
+	private List<HookingSet> target = new ArrayList<HookingSet>();//HookingSet.getHookingMethodSet(conf.hook_injection_method_patterns);
 
 	public ClassVisitor transform(ClassVisitor cv, String className, ClassDesc classDesc) {
 		if (!conf.hook_enabled || !conf.hook_injection_method_enabled) {

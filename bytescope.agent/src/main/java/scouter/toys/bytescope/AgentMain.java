@@ -1,7 +1,7 @@
 package scouter.toys.bytescope;
 
+import scouter.toys.bytescope.mbean.BytescopeAttachment;
 import scouter.toys.bytescope.mbean.BytescopeContext;
-import scouter.toys.bytescope.mbean.BytescopeContextManager;
 import scouterx.toys.bytescope.common.JmxConstant;
 
 import javax.management.MBeanServer;
@@ -14,12 +14,7 @@ import java.lang.management.ManagementFactory;
  */
 public class AgentMain {
     private static Instrumentation instrumentation;
-    private static boolean preMainLoaded = false;
     private static boolean loaded = false;
-
-    public static boolean isPreMainLoaded() {
-        return preMainLoaded;
-    }
 
     public static boolean isLoaded() {
         return loaded;
@@ -29,14 +24,14 @@ public class AgentMain {
         return instrumentation;
     }
 
-    public static void premain(String args, Instrumentation inst) throws Exception {
-        System.out.println("[bytescope] start premain");
-        preMainLoaded = true;
-        innermain(args, inst);
-    }
+//    public static void premain(String args, Instrumentation inst) throws Exception {
+//        System.out.println("[bytescope] start premain");
+//        preMainLoaded = true;
+//        innermain(args, inst);
+//    }
 
     public static void agentmain(String args, Instrumentation inst) throws Exception {
-        if(preMainLoaded || loaded) {
+        if(loaded) {
             System.out.println("[bytescope] aleady loaded");
             return;
         }
@@ -46,27 +41,24 @@ public class AgentMain {
 
     private static void innermain(String args, Instrumentation inst) throws Exception {
         instrumentation = inst;
-        instrumentation.addTransformer(new AgentTransformer(), true);
+        //instrumentation.addTransformer(new AgentTransformer());
 
         loaded = true;
 
         MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
-        BytescopeContext context = BytescopeContextManager.getBytescopeContext();
+        BytescopeContext context = new BytescopeContext();
         context.setLoaded(true);
         context.setAgentProcessName(ManagementFactory.getRuntimeMXBean().getName());
+
         if(args.length() > 0 && args != null && args.length() > 0) {
             context.setLogFilePath(args);
         }
 
         mBeanServer.registerMBean(context, new ObjectName(JmxConstant.CONTEXT));
 
-        Class<?> [] allLoadedClasses = inst.getAllLoadedClasses();
-        String tmpString = null;
-        for (int i = 0; i<allLoadedClasses.length; i++) {
-            tmpString = allLoadedClasses[i].getName();
-            if("scouterx.bytescope.testapp1.FooBar".equals(tmpString)) {
-                instrumentation.retransformClasses(allLoadedClasses[i]);
-            }
-        }
+        BytescopeAttachment attachment = new BytescopeAttachment(inst);
+
+        mBeanServer.registerMBean(attachment, new ObjectName(JmxConstant.ATTACHEMENT));
+
     }
 }

@@ -11,5 +11,6 @@ public interface BytescopeContextMBean {
     void setLogFilePath(String file);
     String getLogFilePath(String file);
 
-
+    void setLogLevel(String level);
+    String getLogLevel();
 }

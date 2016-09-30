@@ -125,7 +125,7 @@ public class RunnerConfigure {
     }
 
 
-    public static String getBytescopeHome() {
+    public String getBytescopeHome() {
         return bytescopeHome;
     }
 
