@@ -31,12 +31,17 @@ public class AgentMain {
 //    }
 
     public static void agentmain(String args, Instrumentation inst) throws Exception {
-        if(loaded) {
-            System.out.println("[bytescope] aleady loaded");
-            return;
+        try {
+            if (loaded) {
+                System.out.println("[bytescope] aleady loaded");
+                return;
+            }
+            System.out.println("[bytescope] start agentmain");
+            innermain(args, inst);
+
+        } catch(Throwable t) {
+            t.printStackTrace();
         }
-        System.out.println("[bytescope] start agentmain");
-        innermain(args, inst);
     }
 
     private static void innermain(String args, Instrumentation inst) throws Exception {

@@ -57,7 +57,7 @@ public class Use {
         //load java agent
         if(!javaAgentLoaded) {
             __.loadJavaAgent(pid);
-            JmxProxy.sendAgentLogFileDef(mbeanConnection);
+            JmxProxy.setAgentLogFileDef(mbeanConnection);
         }
 
         BytescopeContext.setCurrentPid(pid);

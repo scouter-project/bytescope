@@ -81,7 +81,6 @@ class ServletServiceMV extends LocalVariablesSorter implements Opcodes {
 	public ServletServiceMV(int access, String desc, MethodVisitor mv) {
 		super(ASM4, access, desc, mv);
 	}
-	private int statIdx;
 	@Override
 	public void visitCode() {
 		mv.visitVarInsn(Opcodes.ALOAD, 1);
@@ -96,7 +95,6 @@ class ServletServiceMV extends LocalVariablesSorter implements Opcodes {
 	@Override
 	public void visitInsn(int opcode) {
 		if ((opcode >= IRETURN && opcode <= RETURN)) {
-			mv.visitVarInsn(Opcodes.ALOAD, statIdx);
 			mv.visitInsn(Opcodes.ACONST_NULL);
 			mv.visitMethodInsn(Opcodes.INVOKESTATIC, DECO, END_METHOD, END_SIGNATURE, false);
 		}

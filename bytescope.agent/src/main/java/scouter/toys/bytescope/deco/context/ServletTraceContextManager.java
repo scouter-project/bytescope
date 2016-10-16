@@ -13,6 +13,10 @@ public class ServletTraceContextManager {
         return contextTL.get();
     }
 
+    public static ServletTraceContext getContext() {
+        return contextTL.get();
+    }
+
     public static ServletTraceContext end() {
         ServletTraceContext context = contextTL.get();
         contextTL.set(null);

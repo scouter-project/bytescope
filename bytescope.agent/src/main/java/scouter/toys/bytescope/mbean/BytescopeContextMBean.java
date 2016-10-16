@@ -9,7 +9,7 @@ public interface BytescopeContextMBean {
     boolean getLoaded();
 
     void setLogFilePath(String file);
-    String getLogFilePath(String file);
+    String getLogFilePath();
 
     void setLogLevel(String level);
     String getLogLevel();

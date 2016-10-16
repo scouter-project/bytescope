@@ -82,7 +82,7 @@ public class AgentTransformer implements ClassFileTransformer {
                     cr.accept(cv, ClassReader.EXPAND_FRAMES);
                     classfileBuffer = cw.toByteArray();
                     cv = cw = getClassWriter(classDesc);
-                    Logger.info(className + "\t\t[" + loader + "]");
+                    Logger.info(className + "\t[" + loader + "]");
                 }
             }
             return classfileBuffer;

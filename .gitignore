@@ -11,4 +11,12 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-bytescope.boot/target/
+*.iml
+
+bytescope.agent/dependency-reduced-pom.xml
+
+bytescope.boot/target/**
+bytescope.agent/target/**
+bytescope.runner/logs/**
+bytescope.common/target/**
+bytescope.runner/target/**

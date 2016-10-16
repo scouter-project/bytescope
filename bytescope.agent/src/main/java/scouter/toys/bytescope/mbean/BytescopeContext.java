@@ -45,7 +45,7 @@ public class BytescopeContext implements BytescopeContextMBean {
     }
 
     @Override
-    public String getLogFilePath(String file) {
+    public String getLogFilePath() {
         return logFilePath;
     }
 

@@ -2,6 +2,9 @@ package scouterx.toys.bytescope.command;
 
 import scouterx.toys.bytescope.command.support.CommandResult;
 import scouterx.toys.bytescope.util.BytescopeContext;
+import scouterx.toys.bytescope.util.JmxProxy;
+
+import javax.management.MBeanServerConnection;
 
 
 /**
@@ -19,8 +22,15 @@ public class Attach {
         return CommandResult.getBuilder().setResultFail().setMessage("unkonwn command - " + args[0]).build();
     }
 
-    public CommandResult attachThreadNameEnhancer() {
+    public CommandResult attachThreadNameEnhancer(String[] args) {
         String pid = BytescopeContext.getCurrentPid();
+        MBeanServerConnection connection = BytescopeContext.getMBeanConnection(pid);
+
+        if(connection == null) {
+            return CommandResult.getBuilder().setResultFail().setMessage("No MBean connections!").build();
+        }
+
+        JmxProxy.attachEnhancedThreadNameForServlet(connection);
 
         return CommandResult.getBuilder().setResultSuccess().setMessage("[attached] EnhancedThreadNameForServlet").build();
     }

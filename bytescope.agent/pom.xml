@@ -8,6 +8,14 @@
     <artifactId>bytescope-agent</artifactId>
     <version>0.1-SNAPSHOT</version>
 
+    <properties>
+        <scouter.http.jar>scouter.http.jar</scouter.http.jar>
+        <final.jar.name>${pom.build.directory}/${build.finalName}.jar</final.jar.name>
+        <final.jar.name.xtra>${pom.build.directory}/xtra-${build.finalName}.jar</final.jar.name.xtra>
+        <final.jar.name.shade>${pom.build.directory}/shade-${build.finalName}.jar</final.jar.name.shade>
+    </properties>
+
+
     <build>
         <plugins>
             <plugin>
@@ -33,21 +41,94 @@
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>
                     </archive>
+                    <excludes>
+                        <exclude>**/scouter/xtra/**</exclude>
+                    </excludes>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.4.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>make-ext-jar</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <jar destfile="${pom.build.directory}/${scouter.http.jar}">
+                                    <fileset dir="${pom.build.outputDirectory}">
+                                        <include name="scouter/xtra/http/*.class"/>
+                                    </fileset>
+                                </jar>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>add-to-uber-jar</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <echo message="final.jar.name = ${final.jar.name}" />
+                                <echo message="final.jar.name.xtra = ${final.jar.name.xtra}" />
+
+                                <jar destfile="${final.jar.name.xtra}">
+                                    <fileset dir="${pom.build.directory}">
+                                        <include name="${scouter.http.jar}"/>
+                                    </fileset>
+                                    <zipfileset src="${final.jar.name}" />
+
+                                    <manifest>
+                                        <attribute name="Premain-Class" value="scouter.toys.bytescope.AgentMain"/>
+                                        <attribute name="Agent-Class" value="scouter.toys.bytescope.AgentMain"/>
+                                        <attribute name="Can-Redefine-Classes" value="true"/>
+                                        <attribute name="Can-Retransform-Classes" value="true"/>
+                                    </manifest>
+                                </jar>
+
+                                <copy file="${final.jar.name}" tofile="${final.jar.name.shade}" overwrite="true" verbose="true" />
+                                <copy file="${final.jar.name.xtra}" tofile="${final.jar.name}" overwrite="true" verbose="true" />
+                                <delete file="${pom.build.directory}/${scouter.http.jar}" />
+
+                                <copy failonerror="false" file="${final.jar.name}" todir="${project.basedir}/../bytescope.runner/agent/" overwrite="true" verbose="true" />
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
 
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>com.github.scouter-project</groupId>-->
-            <!--<artifactId>scouter-common</artifactId>-->
-            <!--<version>1.1.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>com.github.scouter-project</groupId>
             <artifactId>bytescope-common</artifactId>
             <version>0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

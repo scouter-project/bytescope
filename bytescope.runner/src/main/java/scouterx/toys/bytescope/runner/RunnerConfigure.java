@@ -156,7 +156,7 @@ public class RunnerConfigure {
                 .formatPattern("[{level}][{date}][{class_name}] {message}")
                 .activate();
 
-        JmxProxy.sendAgentLogFileDef(logDir + File.separator + AGENT_LOG_FILE_NAME);
+        JmxProxy.setAgentLogFileDef(logDir + File.separator + AGENT_LOG_FILE_NAME);
     }
 
     public String getValue(String key) {

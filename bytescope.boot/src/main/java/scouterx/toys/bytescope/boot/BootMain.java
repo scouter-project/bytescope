@@ -41,7 +41,7 @@ public class BootMain {
     }
 
     private static void usage() {
-        System.out.println("java -cp ./boot.jar scouter.boot.Boot [./lib] ");
+        System.out.println("java -cp bytescope-boot.jar scouterx.toys.bytescope.boot.BootMain [./lib] ");
     }
 
     private static URL[] getURLs(String path) throws IOException {

@@ -10,6 +10,10 @@ public class JmxConstant {
     public static final String CONTEXT_AGETNT_PROCESS_NAME = "AgentProcessName";
 
     public static final String ATTACHEMENT = "scouter.toys.bytescope:name=BytescopeAttachment";
+    public static final String ATTACHMENT_REDEFINE_CLASSES = "redefineClasses";
+    public static final String ATTACHMENT_ATTACH_ENHANCED_THREADNAME_FOR_SERVLET = "attachEnhancedThreadNameForServlet";
+    public static final String ATTACHMENT_ATTACH_ENHANCED_THREADNAME_FOR_SERVLETFILTER = "attachEnhancedThreadNameForServletFilter";
+    public static final String ATTACHMENT_REDEFINE_IMPLEMENTATIONS = "redefineImplementations";
 
     public static final String LOG_LEVEL_ERROR = "ERROR";
     public static final String LOG_LEVEL_WARN = "WARN";
