@@ -6,7 +6,29 @@
 
     <groupId>com.github.scouter-project</groupId>
     <artifactId>bytescope-runner</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2-SNAPSHOT</version>
+
+    <repositories>
+        <repository>
+            <id>scouter-repo</id>
+            <name>scouter apm repository</name>
+            <url>http://repository.scouterapm.com/artifactory/repository</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>scouter apm releases</name>
+            <url>http://repository.scouterapm.com/artifactory/libs-release-local</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>scouter apm snapshots</name>
+            <url>http://repository.scouterapm.com/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <dependencies>
         <dependency>
@@ -24,7 +46,7 @@
         <dependency>
             <groupId>com.github.scouter-project</groupId>
             <artifactId>bytescope-common</artifactId>
-            <version>0.1-SNAPSHOT</version>
+            <version>0.2-SNAPSHOT</version>
         </dependency>
         <!--<dependency>-->
             <!--<groupId>com.github.scouter-project</groupId>-->

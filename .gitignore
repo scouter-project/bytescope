@@ -20,4 +20,6 @@ bytescope.common/target/
 bytescope.runner/target/
 bytescope.agent/target/
 
+bytescope.boot/bytescope.boot.iml
+
 bytescope.runner/logs/**
